@@ -40,7 +40,27 @@ A continuación se describen, en orden, los pasos que hemos seguido para poner e
    - Posicionamos la casa y el `Player` sobre el plane.  
    - Ajustamos el ángulo de la **Directional Light** para simular éxito lumínico.
 
-6. **Probamos y ajustamos**  
+6. **Decoración del entorno**
+   **Texturizar suelo:**
+      - Creamos un material Ground_Material.
+      - Asignamos la textura de pasto seco al canal Albedo y ajustamos Tiling.
+      - Asignamos Ground_Material al Plane.
+
+   **Árboles tenebrosos:**
+      - Importamos prefabs de árboles oscuros.
+      - Arrastramos y distribuimos varios ejemplares alrededor de la casa para ambientar el escenario.
+
+   **Nubes y cielo:**
+      - Importamos un asset de nubes.
+      - Arrastramos el prefab de cielo a la escena, lo escalamos y configuramos para cubrir el entorno.
+      - Desactivamos cualquier emisión de luz o reflexión que modifique el tono tenebroso.
+
+   **Afinar iluminación “tenebrosa”**
+      - Directional Light: Bajamos su intensidad a ~0.3. Cambiamos su color a un gris azulado.
+      - Point Lights: Añadimos luces puntuales en el interior (GameObject → Light → Point Light) con intensidad baja para puntos de interés.
+      - Ambient Lighting: En Window → Rendering → Lighting → pestaña Environment, cambiamos el Ambient Color a un gris oscuro o cerca del negro.
+
+7. **Probamos y ajustamos**  
    - Pulsamos **Play**. 
    - Corregimos la altura del `Player` (Transform.position.y) para que los pies toquen el suelo.  
    - Ajustamos colisiones y parámetros del **Character Controller** (radius, height).
